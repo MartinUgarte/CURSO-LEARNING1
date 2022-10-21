@@ -36,13 +36,8 @@ class MovingZerosToTheEnd:
     #
     # move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0]
 
-<<<<<<< HEAD
     def move_zeros(lst):
         return sorted(lst, key=lambda x: x == 0)
-=======
-    def move_zeros(xs):
-        return [x for x in xs if x != 0] + [x for x in xs if x == 0]
->>>>>>> refs/rewritten/Victor
 
 
 class ValidParentheses:
@@ -64,16 +59,6 @@ class ValidParentheses:
     # as parentheses (e.g. [], {}, <>).
 
     @staticmethod
-<<<<<<< HEAD
-    def valid_parentheses(string, opened=0):
-        if string == "":
-            return not opened
-        elif string[0] == "(":
-            return ValidParentheses.valid_parentheses(string[1:], opened + 1)
-        elif string[0] == ")":
-            return ValidParentheses.valid_parentheses(string[1:], opened - 1)
-        return ValidParentheses.valid_parentheses(string[1:], opened)
-=======
     def valid_parentheses(string):
         # your code here
         c = []
@@ -82,5 +67,4 @@ class ValidParentheses:
         except:
             return False
         return len(c) == 0
->>>>>>> refs/rewritten/Victor
 

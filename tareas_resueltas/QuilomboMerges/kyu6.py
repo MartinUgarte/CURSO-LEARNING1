@@ -28,28 +28,12 @@ class TakeATenMinutesWalk:
 
     @staticmethod
     def isValidWalk(walk):
-<<<<<<< HEAD
         if len(walk) != 10:
             return False
         if walk.count('n') == walk.count('s') and walk.count('w') == walk.count('e'):
             return True
         else:
             return False
-=======
-        pos = [0, 0]
-        for i in range(len(walk)):
-            if walk[i] == 'n':
-                pos[0] += 1
-            if walk[i] == 's':
-                pos[0] -= 1
-            if walk[i] == 'w':
-                pos[1] += 1
-            if walk[i] == 'e':
-                pos[1] -= 1
-        if pos == [0, 0] and len(walk) == 10:
-            return True
-        return True
->>>>>>> refs/rewritten/Victor
 
 class YourOrderPlease:
     # Your task is to sort a given string. Each word in the string will contain a single number.
@@ -68,24 +52,8 @@ class YourOrderPlease:
 
     @staticmethod
     def order(sentence):
-<<<<<<< HEAD
         return " ".join(sorted(sentence.split(), key=lambda w: [int(c) for c in w if c.isdigit()][0]))
 
-=======
-        ordered = ''
-        if len(sentence) == 0:
-            return ordered
-
-        splitted = sentence.split(' ')
-        i = 1
-        while i <= len(splitted):
-            for word in splitted:
-                if str(i) in word:
-                    ordered = ordered + word
-                    i += 1
-
-        return ordered[:][1:]
->>>>>>> refs/rewritten/Victor
 
 class DuplicateEncoder:
     # The goal of this exercise is to convert a string to a new string where each character in the new string is
@@ -107,10 +75,6 @@ class DuplicateEncoder:
 
     @staticmethod
     def duplicate_encode(word):
-<<<<<<< HEAD
-        d = Counter(word.lower())
-        return "".join("(" if d[c] == 1 else ")" for c in word)
-=======
         encoded = ''
         for character in word.lower():
             if word.lower().count(character) == 1:
@@ -118,4 +82,3 @@ class DuplicateEncoder:
             else:
                 encoded += ')'
         return encoded
->>>>>>> refs/rewritten/Victor
